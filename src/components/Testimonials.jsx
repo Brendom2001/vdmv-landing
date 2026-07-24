@@ -10,7 +10,7 @@ export default function Testimonials({ testimonials = [] }) {
   const looped = [...testimonials, ...testimonials]
 
   return (
-    <section className="overflow-hidden bg-[#EFE9DB] py-24 md:py-32">
+    <section className="overflow-hidden bg-[#EFE9DB] py-16 md:py-32">
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <ScrollReveal className="mb-12 text-center">
           <span className="mb-3 block font-body text-xs font-medium uppercase tracking-[0.2em] text-kin">

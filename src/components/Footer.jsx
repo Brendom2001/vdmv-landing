@@ -2,7 +2,7 @@ import { footer, author, productName } from '../data/content'
 
 export default function Footer() {
   return (
-    <footer className="bg-sumi py-12">
+    <footer className="bg-sumi py-10 md:py-12">
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-center">
         <span className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-washi">
           {productName}

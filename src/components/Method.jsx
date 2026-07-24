@@ -5,7 +5,7 @@ import { method } from '../data/content'
 
 export default function Method() {
   return (
-    <section className="bg-[#EFE9DB] py-24 md:py-32">
+    <section className="bg-[#EFE9DB] py-16 md:py-32">
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <img
           src="/Shuriken.png"

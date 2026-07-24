@@ -5,7 +5,7 @@ import { missions, bonus } from '../data/content'
 
 export default function Missions() {
   return (
-    <section className="bg-[#EFE9DB] py-24 md:py-32">
+    <section className="bg-[#EFE9DB] py-16 md:py-32">
       <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
         <ScrollReveal>
           <Hanko size={64} className="mx-auto mb-8" />

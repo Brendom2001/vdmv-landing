@@ -51,7 +51,7 @@ A página NÃO deve parecer template de infoproduto (fundo preto + dourado brega
 2. **Selo hanko** — carimbo circular vermelho com o kanji 変 (mudança) usado como marcador de seção no lugar de números genéricos, em evidência na seção Missões Ninja, e como selo da garantia.
 3. **Shuriken pintada** — acompanha o scroll da página inteira no desktop (rastro fixo, rotação contínua + física de velocidade), e existe de forma mais contida só dentro do Hero no mobile e com `prefers-reduced-motion`.
 
-**Ritmo:** seções alternam `washi` ↔ `washi` levemente escurecido, com Hero, Apresentação do Produto e Oferta em `sumi` para drama, e faixas de frase de impacto como respiro entre blocos de conteúdo. Sem divisores pesados. Espaçamento generoso (py-24 mobile / py-32 desktop). Border-radius contido (rounded-xl máximo).
+**Ritmo:** seções alternam `washi` ↔ `washi` levemente escurecido, com Hero, Apresentação do Produto e Oferta em `sumi` para drama, e faixas de frase de impacto como respiro entre blocos de conteúdo. Sem divisores pesados. Espaçamento py-16 mobile / py-32 desktop — no mobile o espaçamento é mais enxuto de propósito: com 11 seções + 3 faixas de frase de impacto, o py-24 original deixava a página com 13 telas de altura e a barra fixa de CTA cobrindo grande parte da visita. Border-radius contido (rounded-xl máximo).
 
 ## 4. ESTRUTURA DA PÁGINA (ordem obrigatória)
 

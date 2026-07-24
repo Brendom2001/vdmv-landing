@@ -3,7 +3,7 @@ import { about, author } from '../data/content'
 
 export default function About() {
   return (
-    <section className="bg-washi py-24 md:py-32">
+    <section className="bg-washi py-16 md:py-32">
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-10 px-6 md:flex-row md:items-start">
         <ScrollReveal className="shrink-0">
           <div className="relative p-2">

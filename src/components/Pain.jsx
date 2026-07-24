@@ -25,7 +25,7 @@ export default function Pain() {
   const reduceMotion = useReducedMotion()
 
   return (
-    <section className="bg-washi py-24 md:py-32">
+    <section className="bg-washi py-16 md:py-32">
       <div className="relative z-10 mx-auto max-w-3xl px-6">
         <ScrollReveal>
           <span className="mb-4 block font-body text-xs font-medium uppercase tracking-[0.2em] text-kin">
@@ -42,7 +42,7 @@ export default function Pain() {
               key={item}
               initial={{ opacity: 0, y: reduceMotion ? 0 : 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.15, margin: '0px 0px 150px 0px' }}
               transition={{
                 duration: 0.5,
                 delay: reduceMotion ? 0 : 0.2 + i * 0.08,

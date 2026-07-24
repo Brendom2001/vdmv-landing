@@ -45,7 +45,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(-1)
 
   return (
-    <section className="bg-washi py-24 md:py-32">
+    <section className="bg-washi py-16 md:py-32">
       <div className="relative z-10 mx-auto max-w-2xl px-6">
         <ScrollReveal>
           <span className="mb-4 block font-body text-xs font-medium uppercase tracking-[0.2em] text-kin">

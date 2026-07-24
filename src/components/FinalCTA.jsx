@@ -5,7 +5,7 @@ import { trackInitiateCheckout } from '../lib/pixel'
 
 export default function FinalCTA() {
   return (
-    <section className="bg-washi py-24 md:py-32">
+    <section className="bg-washi py-16 md:py-32">
       <div className="relative z-10 mx-auto flex max-w-xl flex-col items-center gap-8 px-6 text-center">
         <ScrollReveal>
           <h2 className="font-display text-3xl font-bold text-sumi sm:text-4xl">

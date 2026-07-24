@@ -1,14 +1,31 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { offer, KIWIFY_LINK } from '../data/content'
 import { trackInitiateCheckout } from '../lib/pixel'
 
 export default function MobileCTA() {
   const [visible, setVisible] = useState(false)
+  const lastScrollY = useRef(0)
 
+  // The page is long (11+ sections). A bar that stays pinned for the whole
+  // rest of the scroll eats real estate on a small screen for most of the
+  // visit, so it hides on scroll-down and only reappears on scroll-up —
+  // same pattern as most native mobile browser chrome.
   useEffect(() => {
     function onScroll() {
-      setVisible(window.scrollY > window.innerHeight * 0.8)
+      const y = window.scrollY
+      const pastThreshold = y > window.innerHeight * 0.8
+      const scrolledUp = y < lastScrollY.current - 4
+      const scrolledDown = y > lastScrollY.current + 4
+
+      setVisible((prev) => {
+        if (!pastThreshold) return false
+        if (scrolledDown) return false
+        if (scrolledUp) return true
+        return prev
+      })
+
+      lastScrollY.current = y
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)

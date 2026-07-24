@@ -3,7 +3,7 @@ import { whoFor } from '../data/content'
 
 export default function WhoFor() {
   return (
-    <section className="bg-[#EFE9DB] py-24 md:py-32">
+    <section className="bg-[#EFE9DB] py-16 md:py-32">
       <div className="relative z-10 mx-auto max-w-4xl px-6">
         <ScrollReveal className="mb-14 text-center">
           <span className="mb-4 block font-body text-xs font-medium uppercase tracking-[0.2em] text-kin">

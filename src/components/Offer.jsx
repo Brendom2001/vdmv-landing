@@ -7,7 +7,7 @@ import { trackInitiateCheckout } from '../lib/pixel'
 
 export default function Offer() {
   return (
-    <section className="bg-sumi py-24 md:py-32">
+    <section className="bg-sumi py-16 md:py-32">
       <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
         <ScrollReveal>
           <h2 className="relative inline-block font-display text-3xl font-bold text-washi sm:text-4xl">
