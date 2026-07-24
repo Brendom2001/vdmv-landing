@@ -1,7 +1,7 @@
 import ScrollReveal from './ScrollReveal'
 
 // AJUSTAR: seção não é renderizada em Home.jsx até existirem depoimentos reais
-// de leitoras beta (ver src/data/content.js -> testimonials). Nunca preencher
+// de leitores beta (ver src/data/content.js -> testimonials). Nunca preencher
 // `testimonials` com depoimentos inventados — a spec exige omitir a seção
 // inteira até haver prova social real.
 export default function Testimonials({ testimonials = [] }) {

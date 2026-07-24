@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import MagneticButton from './MagneticButton'
-import { KIWIFY_LINK } from '../data/content'
+import { KIWIFY_LINK, productName } from '../data/content'
 import { trackInitiateCheckout } from '../lib/pixel'
 
 export default function Navbar() {
@@ -23,7 +23,9 @@ export default function Navbar() {
       }}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <span className="font-display text-lg font-bold tracking-[-0.02em] text-washi">VDMV</span>
+        <span className="font-display text-xs font-bold uppercase tracking-[0.15em] text-washi sm:text-sm">
+          {productName}
+        </span>
         <MagneticButton
           href={KIWIFY_LINK}
           onClick={trackInitiateCheckout}

@@ -75,8 +75,8 @@ export default function Chapters() {
   const statsInView = useInView(statsRef, { once: true, amount: 0.6 })
 
   const chapterCount = useCountUp(chapters.stats.chapters, statsInView)
-  const exerciseCount = useCountUp(chapters.stats.exercises, statsInView)
-  const dayCount = useCountUp(chapters.stats.days, statsInView)
+  const missionCount = useCountUp(chapters.stats.missions, statsInView)
+  const decisionCount = useCountUp(chapters.stats.decision, statsInView)
 
   return (
     <section className="bg-washi py-24 md:py-32">
@@ -110,9 +110,9 @@ export default function Chapters() {
         >
           <span>{chapterCount} capítulos</span>
           <span className="text-nezumi">·</span>
-          <span>{exerciseCount} exercícios práticos</span>
+          <span>{missionCount} missões práticas</span>
           <span className="text-nezumi">·</span>
-          <span>{dayCount} dias de treino</span>
+          <span>{decisionCount} decisão</span>
         </div>
       </div>
     </section>

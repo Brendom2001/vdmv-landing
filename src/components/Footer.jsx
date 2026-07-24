@@ -1,10 +1,12 @@
-import { footer, author } from '../data/content'
+import { footer, author, productName } from '../data/content'
 
 export default function Footer() {
   return (
     <footer className="bg-sumi py-12">
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 text-center">
-        <span className="font-display text-sm font-semibold text-washi">VDMV</span>
+        <span className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-washi">
+          {productName}
+        </span>
         <p className="max-w-md font-body text-xs text-washi/50">{footer.disclaimer}</p>
         <div className="flex gap-4 font-body text-xs text-washi/50">
           <a href={footer.termsHref} className="hover:text-washi">

@@ -47,8 +47,9 @@ export default function About() {
               </p>
             ))}
           </div>
-          <p className="mt-6 font-body text-xs uppercase tracking-wide text-nezumi">
-            {author.instagram} · {author.followers} seguidoras
+          <p className="mt-6 font-display text-base font-semibold text-shu">{about.closing}</p>
+          <p className="mt-4 font-body text-xs uppercase tracking-wide text-nezumi">
+            {author.instagram}
           </p>
         </ScrollReveal>
       </div>

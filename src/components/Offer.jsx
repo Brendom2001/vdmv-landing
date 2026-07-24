@@ -36,6 +36,8 @@ export default function Offer() {
             <span className="font-body text-xs text-washi/50">{offer.installments}</span>
           </div>
 
+          <p className="mx-auto mt-6 max-w-sm font-body text-sm text-washi/70">{offer.valueLine}</p>
+
           <MagneticButton
             href={KIWIFY_LINK}
             onClick={trackInitiateCheckout}

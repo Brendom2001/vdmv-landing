@@ -42,6 +42,16 @@ export default function Hero() {
 
   const titleWords = hero.titleLine2.split(' ')
 
+  // Per-word grouping keeps the global per-character stagger delay (i * 0.055)
+  // while stopping the browser from breaking a line in the middle of a word —
+  // adjacent inline-block spans with no whitespace between them are still
+  // legal break points, so plain char-by-char splitting can (and did, once
+  // titleLine1 got long enough to wrap) cut a word like "que" into "qu"/"e".
+  let titleLine1CharIndex = 0
+  const titleLine1Words = hero.titleLine1.split(' ').map((word) =>
+    word.split('').map((char) => ({ char, i: titleLine1CharIndex++ })),
+  )
+
   return (
     <section
       ref={sectionRef}
@@ -66,20 +76,27 @@ export default function Hero() {
 
           <h1 className="font-display text-4xl font-bold text-washi sm:text-5xl md:text-6xl">
             <span className="block">
-              {hero.titleLine1.split('').map((char, i) => (
-                <motion.span
-                  key={i}
-                  className="inline-block"
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={
-                    reduceMotion
-                      ? { duration: 0.3 }
-                      : { duration: 0.5, delay: i * 0.055, ease: EASE }
-                  }
-                >
-                  {char === ' ' ? ' ' : char}
-                </motion.span>
+              {titleLine1Words.map((wordChars, wi) => (
+                <span key={wi}>
+                  <span className="inline-block whitespace-nowrap">
+                    {wordChars.map(({ char, i }) => (
+                      <motion.span
+                        key={i}
+                        className="inline-block"
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={
+                          reduceMotion
+                            ? { duration: 0.3 }
+                            : { duration: 0.5, delay: i * 0.055, ease: EASE }
+                        }
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                  </span>
+                  {wi < titleLine1Words.length - 1 ? ' ' : ''}
+                </span>
               ))}
             </span>
             <span className="relative mt-1 inline-block text-shu">
@@ -135,7 +152,7 @@ export default function Hero() {
         <div className="relative z-10 flex flex-1 items-center justify-center">
           <motion.img
             src="/mockup-ebook.png"
-            alt="Capa do e-book Vai Doer, Mas Vai Mudar"
+            alt="Capa do e-book O Caminho Ninja"
             loading="eager"
             width={340}
             height={440}

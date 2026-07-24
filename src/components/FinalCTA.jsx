@@ -11,6 +11,7 @@ export default function FinalCTA() {
           <h2 className="font-display text-3xl font-bold text-sumi sm:text-4xl">
             {finalCta.title}
           </h2>
+          <p className="mt-4 font-body text-base text-sumi/70">{finalCta.subtitle}</p>
         </ScrollReveal>
         <ScrollReveal index={1}>
           <MagneticButton
