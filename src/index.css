@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-display: 'Erode', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-body: 'Satoshi', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -10,12 +15,19 @@
 
   body {
     @apply bg-washi text-sumi font-body antialiased;
+    line-height: 1.6;
   }
 
   h1,
   h2,
   h3 {
     @apply font-display;
+    letter-spacing: -0.02em;
+    /* !important: Tailwind's text-* size utilities (text-4xl, md:text-6xl…)
+       bundle their own line-height and beat a plain element selector on
+       specificity/cascade order — without this, every heading's leading
+       silently reverts to whatever its text-size utility ships with. */
+    line-height: 1.1 !important;
   }
 }
 

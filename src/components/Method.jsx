@@ -8,7 +8,7 @@ export default function Method() {
     <section className="bg-[#EFE9DB] py-24 md:py-32">
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <img
-          src="/shuriken.webp"
+          src="/Shuriken.png"
           alt=""
           loading="lazy"
           width={64}

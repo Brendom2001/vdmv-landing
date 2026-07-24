@@ -23,7 +23,7 @@ export default function Navbar() {
       }}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <span className="font-display text-lg font-bold tracking-tight text-washi">VDMV</span>
+        <span className="font-display text-lg font-bold tracking-[-0.02em] text-washi">VDMV</span>
         <MagneticButton
           href={KIWIFY_LINK}
           onClick={trackInitiateCheckout}

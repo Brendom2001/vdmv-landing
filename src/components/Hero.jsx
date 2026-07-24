@@ -4,7 +4,7 @@ import MagneticButton from './MagneticButton'
 import BrushStroke from './BrushStroke'
 import { hero, KIWIFY_LINK } from '../data/content'
 import { trackInitiateCheckout } from '../lib/pixel'
-import { SHURIKEN_SHU_SRC, shurikenDropShadow } from '../lib/shurikenStyle'
+import { SHURIKEN_SRC } from '../lib/shurikenStyle'
 import useIsDesktop from '../hooks/useIsDesktop'
 
 const EASE = [0.76, 0, 0.24, 1]
@@ -64,7 +64,7 @@ export default function Hero() {
             {hero.eyebrow}
           </motion.span>
 
-          <h1 className="font-display text-4xl font-bold leading-[1.15] text-washi sm:text-5xl md:text-6xl">
+          <h1 className="font-display text-4xl font-bold text-washi sm:text-5xl md:text-6xl">
             <span className="block">
               {hero.titleLine1.split('').map((char, i) => (
                 <motion.span
@@ -157,11 +157,11 @@ export default function Hero() {
         // never reappears — there's no scroll-driven opacity fade here to
         // hide a viewport-pinned element once Hero ends.
         <img
-          src={SHURIKEN_SHU_SRC}
+          src={SHURIKEN_SRC}
           alt=""
           loading="eager"
           className="pointer-events-none absolute right-[4%] top-[30%] z-[5] h-[180px] w-[180px] select-none md:right-[10%] md:h-[300px] md:w-[300px]"
-          style={{ opacity: 0.85, ...shurikenDropShadow }}
+          style={{ opacity: 0.85 }}
           aria-hidden="true"
         />
       ) : (
@@ -174,14 +174,13 @@ export default function Hero() {
           // the lower part of the screen). Anchored near the bottom of Hero
           // so the shrink/fade is still visible right up to the seam.
           <motion.img
-            src={SHURIKEN_SHU_SRC}
+            src={SHURIKEN_SRC}
             alt=""
             loading="eager"
             className="pointer-events-none absolute right-[4%] top-[68%] z-[5] h-[180px] w-[180px] select-none"
             style={{
               scale: mobileShurikenScale,
               opacity: mobileShurikenOpacity,
-              ...shurikenDropShadow,
             }}
             aria-hidden="true"
           />

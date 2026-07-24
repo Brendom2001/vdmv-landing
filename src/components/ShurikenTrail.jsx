@@ -5,7 +5,7 @@ import {
   useVelocity,
   useSpring,
 } from 'framer-motion'
-import { SHURIKEN_SHU_SRC, shurikenDropShadow } from '../lib/shurikenStyle'
+import { SHURIKEN_SRC } from '../lib/shurikenStyle'
 
 const BASE_OPACITY = 0.85
 
@@ -41,7 +41,7 @@ export default function ShurikenTrail() {
 
   return (
     <motion.img
-      src={SHURIKEN_SHU_SRC}
+      src={SHURIKEN_SRC}
       alt=""
       loading="eager"
       className="pointer-events-none fixed right-[6vw] z-[5] h-[220px] w-[220px] select-none md:h-[300px] md:w-[300px]"
@@ -50,7 +50,6 @@ export default function ShurikenTrail() {
         scale,
         opacity,
         rotate,
-        ...shurikenDropShadow,
       }}
       aria-hidden="true"
     />
